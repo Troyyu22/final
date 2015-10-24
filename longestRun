@@ -16,8 +16,11 @@ def longestRun(L):
         sublists = getSublists(L, i)
         for j in range(len(sublists)):
             flag = False
-            for z in i:
+            for z in range(i-1):
                 if sublists[j][z+1] > sublists[j][z]:
+                    flag = True
+            if not flag:
+                return i
                     
 
 getSublists(L, n)
