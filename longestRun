@@ -1,0 +1,23 @@
+def getSublists(L, n):
+    result = []   
+    for i in range(len(L)-(n-1)):
+        sublist = []
+        indy = i
+        for j in range(n):
+            sublist.append(L[indy])
+            indy += 1
+        result.append(sublist)        
+    return result
+    
+L = [10, 4, 6, 8, 3, 4, 5, 7, 7, 2]
+
+def longestRun(L):
+    for i in range(len(L), 0, -1):
+        sublists = getSublists(L, i)
+        for j in range(len(sublists)):
+            flag = False
+            for z in i:
+                if sublists[j][z+1] > sublists[j][z]:
+                    
+
+getSublists(L, n)
